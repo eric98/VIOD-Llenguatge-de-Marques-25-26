@@ -95,7 +95,7 @@ _Simulació d'un text "Hello World" a la web delimitant cada part del Box Model_
 
 _Exemple on es visualitza el border de cada element_
 
-> [!ALERT]
+> [!WARNING]
 > Per defecte i per herència història, HTML utilitza el ***box-sizing: content-box*** que delimita el width i el height de la caixa a les dimensions del content.
 > - Quan afegim un border, se'ns pot desplaçar el contingut.
 > - Amb el border-box, el width i el heigth es calcula tenint el compte el content, padding i border.

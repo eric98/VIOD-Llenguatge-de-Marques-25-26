@@ -5,6 +5,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript
 Crea un element &lt;button&gt; i un element &lt;p&gt;. Escriu el codi per a que &lt;p&gt; sempre mostri la quantitat de vegades que s'ha clicat al botó.
 <br>
 Pista: revisa la funció addEventListener("click", ...)
+<br>
 Documentació: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button
 
 # Exercici 2 - Salutacions
@@ -18,21 +19,21 @@ Construeix un formulari que demani nom, data de naixement, correu i un missatge.
 # Exercici 4 - Joc "Tenia gana :S"
 Endevina quants cacaus s'ha menjat l'esquirol. Fes servir un &lt;input&gt; per introduir el número, un &lt;button&gt; per enviar la resposta i un &lt;p&gt; per mostrar si has encertat o no.
 <br>
-Personalitza el joc amb algun aspecte temàtic. Per exemple, mostra la imatge (1) mentre s'endevina el número i la imatge (2) quan s'ha endevinat.
-(1) https://media.tenor.com/B_vGaKbw0-sAAAAM/squirrel-nut.gif
+Personalitza el joc amb algun aspecte temàtic. Per exemple, mostra la imatge (1) mentre s'endevina el número i la imatge (2) quan s'ha endevinat.<br>
+(1) https://media.tenor.com/B_vGaKbw0-sAAAAM/squirrel-nut.gif<br>
 (2) https://www.goodnewsnetwork.org/wp-content/uploads/2019/09/Geert-Weggen-and-Squirrel-2-SWNS.jpg
 
 # Exercici 5 - Joc "Pokémon inicial"
 Recrea la bafarada de text de quan elegeixes un pokémon.
 <br>
-Referència:
+Referència:<br>
 https://static.wikia.nocookie.net/essentialsdocs/images/3/3a/ChoosingStarter.png/revision/latest?cb=20190219205247
 
 A sobre la bafarada, afegeix 3 botons a un &lt;div&gt;. Els botons han d'estar aliniats hortitzontalment i cadascun representa una pokéball amb un starter diferent. 
 <br>
 A sobre dels botons, afegeix un &lt;img&gt; que mostri el pokémon seleccionat. Incialment es mostra la imatge de pokémon desconegut de les primeres generacions. Quan es prem a cadascun dels botons, s'ha de mostrar la imatge del pokémon dins de la pokéball.
 <br>
-Pokémon desconegut: https://media.tenor.com/OPn74TiVetgAAAAe/pokemon-emerald-question-mark.png
-Pokémons inicials: escolleix al teu gust.
+Pokémon desconegut: https://media.tenor.com/OPn74TiVetgAAAAe/pokemon-emerald-question-mark.png<br>
+Pokémons inicials: escolleix al teu gust.<br>
 <br>
 Documentació per mostrar els botons aliniats horitzontalment: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display

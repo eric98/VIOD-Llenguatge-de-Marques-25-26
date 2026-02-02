@@ -173,6 +173,19 @@ _**Exemple:** Marge inferior de 2% l'altura de la finestra (vh)_
 
 _Enllaç on poder provar amb margin + diferents unitats: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/margin_
 
+# 8. Pseudo-classes habituals
+
+_Documentació: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes_
+
+## 8.1 Botons
+:hover
+:active
+:focus
+:disabled
+
+## 8.2 Enllaços
+:visited
+
 # _Altres: Propietats vistes al projecte rubiks_
 ```css
 font-family: Arial, sans-serif; /* Cos general */

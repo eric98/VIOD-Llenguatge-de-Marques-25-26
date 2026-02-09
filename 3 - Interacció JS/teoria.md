@@ -160,13 +160,36 @@ L'arbre DOM és una estructura d'arbre on cada node representa un element HTML i
 _Més informació: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model_
 
 # 12. Validació de formularis amb JavaScript
+## Exemple HTML
+```html
+<form id="formulari">
+
+  <!-- Camp obligatori -->
+  <label for="nom">Nom:</label>
+  <input type="text" id="nom" name="nom" required>
+
+  <!-- Solament s'accepta edat=18 -->
+  <label for="edat">Edat:</label>
+  <input type="number" id="edat" name="edat" required>
+
+  <!-- Es valida si s'ha escrit un correu comprovant si conté una @ -->
+  <label for="email">Correu electrònic:</label>
+  <input type="email" id="email" name="email" required>
+
+  <button type="submit">Enviar</button>
+
+</form>
+```
+
 ## Pas 1. Capturar l'esdeveniment submit
 ```js
 const formulari = document.getElementById("formulari");
 
 formulari.addEventListener("submit", function(event) {
-  // Evita que es faci el comportament per defecte
-  // Ens interessa per definir-li les nostres instruccions
+  // Evita que enllaços, botons de formularis, desplegables, etc.
+  // executin el seu comportament per defecte.
+  // En aquest cas ens interessa per definir-li 
+  // les nostres pròpies instruccions
   event.preventDefault();
 
   // Definim el comportament del formularis
@@ -205,6 +228,43 @@ function validarFormulari() {
 ```
 
 _Més informació: https://www.freecodecamp.org/news/how-to-submit-a-form-with-javascript/_
+
+## Extra. Assignació de codi per a tots els elements amb la mateixa classe
+#### Exemple aplicat a un joc de cartes
+```js
+const cartes = document.querySelectorAll(".carta");
+
+cartes.forEach(carta => {
+  carta.addEventListener("click", () => { 
+    
+    // Es canvia la classe de la carta a "carta-clicada"
+    carta.className = "carta-clicada";
+     
+  }); 
+});
+
+```
+
+_Més informació: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll_
+
+# 13. Afegir informació extra als elements HTML
+## Pas 1. Guardar el nom i el preu del producte utilitzant data-*
+```html
+<button class="producte" data-nom="Cafè" data-preu="12.99">
+  Afegir al carret
+</button>
+```
+
+## Pas 2. Consultar el nom i el preu dels elements utilitzant la propietat dataset
+```js
+const boto = document.querySelector(".producte");
+
+boto.addEventListener("click", () => {
+  console.log("Nom del producte:", boto.dataset.nom);
+  console.log("Preu:", boto.dataset.preu);
+});
+```
+_Més informació: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset_
 
 # FAQS
 _Podeu enviar PR (Pull Requests) amb preguntes i les aniré afegint amb les seves respostes corresponents. :)_

@@ -75,8 +75,56 @@ Amb la propietat ***font-family*** Podem escollir quina font utilitzarà el nave
 
 _Altres ftipus de fonts: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font_
 
-# 5. Colors [TODO]
+# 5. Colors
+## 5.1 Representació de colors
+Els colors es poden definir de diverses maneres:
+- **Noms de color**. Hi ha 140 colors predefinits a CSS.
+```css
+red, blue, lightgray
+```
+- **Hexadecimal**. Cada 2 caràcters forma un número hexadecimal. Cada número hexadecimal representa un color rgb.
+```css
+#ff0000 /* es pot abreviar amb #f00 */
+```
+- **RGB**. Representa la intensitat de Red, Green i Blue. Calculadora de color RGB (mode RGB): https://www.hslpicker.com/#70ff33
+```css
+rgb(255 0 0) /* 255 unitats de red (màx. 255), 0 de green i 0 de blue */
+rgb(255 0 0 / 0.1) /* unitats anteriors amb opacitat del 0.1 (10%) */
+```
+- **HSL**. Representa el to (Hue), saturació (Saturation) i lluminositat (Lightness). Calculadora de color HSL (mode HSL): https://www.hslpicker.com/#70ff33
+```css
+hsl(200 80% 50%) /* 200 unitats de to (de 0 a 360 seguint la roda cromàtica), 80% de saturació i 50% de lluminositat */
+hsl(200 80% 50% / 0.6) /* unitats anteriors amb opacitat del 0.6 (60%) */
+```
+
+_Més info: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors/Color_values_
+
+## 5.2 Com aplicar els colors
+
+Les propietats més comuns són backgroundColor per canviar el color de fons d'un element i color per canviar el color del text d'un element.
+
+**Exemple 1. Assignem lightblue com a color de fons.**
+```css
+div {
+  background-color: lightblue;
+}
+```
+
+_Més info: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-color_
+
+**Exemple 2. Assignem darkslategray com a color del text.**
+```css
+p {
+  color: darkslategray;
+}
+```
+
 _Més info: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color_
+
+Existeixen altres propietats que modifiquen el color. Per exemple, podem utilitzar border-color per a canviar el color del border dels elements.
+
+_Més info (apartat Related concepts): https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Colors_
+
 # 6. Box Model
 A HTML, tot element es tracta com si fos una caixa de 4 parts:
 - **Content:** contingut real (part interna)

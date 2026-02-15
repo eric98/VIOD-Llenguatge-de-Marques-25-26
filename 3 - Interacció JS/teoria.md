@@ -13,7 +13,7 @@ Hi ha 3 maneres d’afegir JavaScript a un document HTML.
 
 | Intern | En línia | Extern |
 |--------|----------|---------|
-| Dins de `<body>` o `<head>`, s'afegeix l'element `<script>` | S'escriu directament a l'atribut d'un element HTML, com `onclick=""` | Es crea un fitxer `.js` separat i s'enllaça amb `src=""` |
+| Dins de `<body>` o `<head>`, s'afegeix l'element `<script>` | S'escriu directament a l'atribut d'un element HTML, com `onclick=""` | Es crea un fitxer `.js` separat i s'enllaça amb l'atribut `src=""`. Mitjançant l'element `<script>` dins de `<body>` o `<head>`. |
 | `<script> console.log("JS intern"); </script>` | `<button onclick="alert('Hola!')">Fes clic</button>` | `<script src="script.js"></script>` |
 
 

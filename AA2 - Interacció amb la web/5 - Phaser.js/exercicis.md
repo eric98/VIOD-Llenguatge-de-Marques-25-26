@@ -21,7 +21,7 @@ Pistes:
 Documentació: https://docs.phaser.io/phaser/concepts/gameobjects/text
 
 # Exercici 2 - Primer joc a Phaser
-Segueix el tutorial oficial "Making your first Phaer game" i crea un petit videojoc funcional. Assegura't que funcionin les següents característiques del joc:
+Segueix el tutorial oficial "Making your first Phaser game" i crea un petit videojoc funcional. Assegura't que funcionin les següents característiques del joc:
 
 - el jugador es pot moure i saltar
 - hi ha un món amb plataformes estàtiques
@@ -32,10 +32,13 @@ Segueix el tutorial oficial "Making your first Phaer game" i crea un petit video
 
 Nota: L'objectiu de l'exercici és entendre el el cicle de vida de Phaser (preload, create, update) i familiaritzar-se en la creació de nous elements.
 
+Tutorial "Making your first Phaser game": https://docs.phaser.io/phaser/getting-started/making-your-first-phaser-game
+
 # Exercici 3 - Arquitectura modular amb Phaser
-Reorganitza el codi de l'exercici 2 per a que el projecte sigui fàcil de mantenir. Crea un script per cada element de joc i distribueix la lògica de joc entre els diversos fitxers. Cada fitxer correspon a un element i només es responsable de la seva informació i gestió.
+Reorganitza el codi de l'exercici 2 per a que el projecte sigui fàcil de mantenir. Crea un script per a cada element de joc i distribueix la lògica del main.js entre els diversos fitxers. Cada fitxer correspon a un element diferent i només es responsable de la seva informació i gestió.
 - Afegeix l'atribut type="module" a l'element script de l'index.html.
 - Crea un fitxer Player.js que contingui la classe del jugador (moviment, animacions, etc.).
 - Crea un fitxer StarGroup.js per gestionar les estrelles del joc.
 - Utilitza main.js com a punt d’entrada del joc, amb la configuració (config) i la creació de l’escena.
+- Defineix els elements de joc com a atributs de l'escena i gestiona la creació d'objectes i les seves col·lisions des del create().
 - Importa les classes amb import i utilitza-les dins de create() i update().

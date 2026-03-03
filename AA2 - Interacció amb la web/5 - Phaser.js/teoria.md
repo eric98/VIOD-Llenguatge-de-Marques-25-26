@@ -39,7 +39,7 @@ Exposar el nostres fitxers a la web és molt perillòs. La manera adequada és c
 
 ### 2.2 Carregar les llibreries phaser.js
 
-Podem carregar Phaser remotament des d’un CDN. 
+Podem carregar Phaser remotament des d’un servidor web. 
 
 ```html
 <!-- Pas únic: Càrrega remota -->

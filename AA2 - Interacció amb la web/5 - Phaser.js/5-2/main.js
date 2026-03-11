@@ -24,7 +24,21 @@ new Phaser.Game(config);
 var player;
 var platforms;
 var stars;
+var score = 0;
+var scoreText;
 
+// COL·LISIONS
+function collectStar (player, star)
+{
+    // Desactiva l'arcadeSprite
+    star.disableBody(true, true);
+
+    // Actualitzar l'score
+    score += 10;
+    scoreText.setText('Score: ' + score);
+}
+
+// MÈTODES DE CONTROL DE FLUX
 // Es carreguen recursos externs (imatges, sons, etc.)
 function preload ()
 {
@@ -41,10 +55,10 @@ function preload ()
 // Inicialitza els elements de joc
 function create ()
 {
-    // 1. Afegim elements a l'escena
+    // 1. AFEGIM ELEMENTS A L'ESCENA
+
     // Afegim imatges
     this.add.image(400, 300, 'sky');
-    this.add.image(400, 300, 'star');
 
     // Afegim plataformes
     platforms = this.physics.add.staticGroup();
@@ -57,36 +71,19 @@ function create ()
     // Afegim jugador
     player = new Player(this, 100, 450);
 
-    // Ho passem a Player.js
-    /* player = this.physics.add.sprite(100, 450, 'dude');
-
-    player.setBounce(0.2);
-    player.setCollideWorldBounds(true); */
+    // Afegim textos
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
     // Afegim estrelles
     stars = new Stars(this);
-    // Ho passem a Stars.js
-    /*stars = this.physics.add.group({
-        key: 'star',
-        repeat: 11,
-        setXY: { x: 12, y: 0, stepX: 70 }
-    });
 
-    stars.children.iterate(function (child) {
-        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
-    }); */
-
-    // 2. Configurem animacions
-    // --
-
-    // 3. Configurem les col·lissions (amb els arcadePhysics!)
+    // 2. DEFINIM COL·LISIONS (amb els arcadePhysics!)
+    // Col·lisions entre elements
+    this.physics.add.collider(stars.physicSpritesGroup, platforms);
+    
+    // Col·lisions amb el Player
     this.physics.add.collider(player.physicsSprite, platforms);
-    this.physics.add.collider(stars.group, platforms);
-
-    this.physics.add.overlap(player.physicsSprite, stars.group, stars.collectStar, null, this);
-
-    // 4. Altres configuracions
-
+    this.physics.add.overlap(player.physicsSprite, stars.physicSpritesGroup, collectStar, null, this);
     
 }
 

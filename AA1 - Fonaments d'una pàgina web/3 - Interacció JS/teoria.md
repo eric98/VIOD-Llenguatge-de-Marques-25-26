@@ -5,10 +5,6 @@ _Documentació Mozilla Foundation:
 
 # 1. Implementació de codi JavaScript
 
-Hi ha 3 maneres per aplicar estils a HTML.
-
-# 1. Implementació de codi JavaScript
-
 Hi ha 3 maneres d’afegir JavaScript a un document HTML.
 
 | Intern | En línia | Extern |
@@ -140,7 +136,7 @@ else
 La varaiable `document` ens permet accedir a tota la informació de l'arbre DOM.
 
 ![Arbre DOM](https://upload.wikimedia.org/wikipedia/commons/5/5a/DOM-model.svg)
-_Concepte Arbre DOM a la web (https://en.wikipedia.org/wiki/Document_Object_Model)_
+<br>_Concepte Arbre DOM a la web (https://en.wikipedia.org/wiki/Document_Object_Model)_
 
 L'arbre DOM és una estructura d'arbre on cada node representa un element HTML i el seu contingut. Quan el navegador llegeix un fitxer HTML, crea un arbre DOM que utilitza per a mostrar el seu contingut per pantalla.
 

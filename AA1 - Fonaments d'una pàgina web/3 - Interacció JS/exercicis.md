@@ -1,12 +1,15 @@
 ### Documentació JS
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
-# Exercici 1 - Contador
+# Exercici 1 - Comptador
 Crea un element &lt;button&gt; i un element &lt;p&gt;. Escriu el codi per a que &lt;p&gt; sempre mostri la quantitat de vegades que s'ha clicat al botó.<br>
 <br>
 Pista: revisa la funció addEventListener("click", ...)<br>
 <br>
 Documentació: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button
+
+Resolució de l'exercici:
+[index.html](./exercici1/index.html) i [script.js](./exercici1/script.js)
 
 # Exercici 2 - Salutacions
 Connecta un &lt;input&gt; amb un &lt;button&gt;. L'input demana el nom de l'usuari, i el button genera un alert() saludant a l'usuari.<br>
@@ -37,3 +40,7 @@ Pokémon desconegut: https://media.tenor.com/OPn74TiVetgAAAAe/pokemon-emerald-qu
 Pokémons inicials: escolleix al teu gust.<br>
 <br>
 Documentació per mostrar els botons aliniats horitzontalment: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display
+
+Resolució de l'exercici:
+[index.html](./exercici5/index.html), [style.css](./exercici5/style.css) i 
+[script.js](./exercici5/script.js) 

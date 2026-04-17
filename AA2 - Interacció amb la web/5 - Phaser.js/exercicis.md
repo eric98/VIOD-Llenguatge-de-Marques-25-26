@@ -45,19 +45,39 @@ Reorganitza el codi de l'exercici 2 per a que el projecte sigui fàcil de manten
 
 # Exercici 4 - TODO
 
-# Exercici 5 - Arkanoid
-Desenvolupa una versió bàsica del clàssic Arkanoid i personalitza-la al teu gust.
-- (Player.js) Utilitza la classe Rectangle per a crear al Player. S'ha de poder moure horitzontalment mitjançant un cursor.
-- (Blocks.js) Utilitza la classe Rectangle i l'element de grup per a crear l'agrupació física de blocs. S'ha de poder jugar amb una agrupació de 12 columnes i 6 files.
-- (Ball.js) Utilitza la classe Circle per a crear la pilota. Aquesta ha de col·lisionar amb el Player, amb l'agrupació de Blocks i amb els límits del canvas.
+# Exercici 5 - Bowser
+Desenvolupa una versió bàsica del minijoc de Bowser (New. Super Mario Bros, DS).
+[![Bowser gameplay](https://img.youtube.com/vi/-zx0z5XUPcg/0.jpg)](https://youtu.be/-zx0z5XUPcg)
 
-- La pilota ha de començar aturada damunt del jugador i iniciar-se amb la tecla espai.
-- Quan no quedin blocs, el joc mostra un missatge de victòria.
-- Quan la pilota cau per sota del canvas, mostra un missatge de derrota.
+- (Player.js) S'ha de poder desplaçar amb el ratolí.
+- (Bombs.js) En un inici, estan totes desactivades. Cada 150 ms, s'obté una de les desactivades, s'activa i apareix a la pantalla fins que surt fora dels marges de la pantalla i es desactiva. N'hi ha màxim 30.
 
-Documentació interessant
-https://docs.phaser.io/api-documentation/class/geom-circle
-https://docs.phaser.io/api-documentation/class/geom-rectangle
+- A l'inici del joc, el jugador té 3 vides. Si el jugador arriba a 0, es mostra un text amb You Lose.
+- Si el jugador sobreviu 10 segons, es mostra un text amb You Win.
 
-Imatge de referència:
-https://tn.com.ar/resizer/v2/retrogames-volve-a-jugar-al-arkanoid-FOHSVTEURG47U3BY2AUCVXGBMI.jpg?auth=3fe579f6121294d154f5d7ab8b096d8b59a999af8c0a69d557e4e4cfad0cc348&width=767
+- La col·lisió entre el jugador i una bomba resta 1 vida.
+
+- Utilitza les funcions disableBody(), enableBody(), getFirstDead() per a reciclar les bombes.
+
+Obtenir el primer objecte del grup que està desactivat:
+https://docs.phaser.io/api-documentation/class/gameobjects-group#getfirstdead
+```js
+// Dead: no és visible i no té el sistema de físiques activat
+this.physicSpritesGroup.getFirstDead();
+```
+
+Activar un objecte:
+https://docs.phaser.io/api-documentation/namespace/physics-arcade-components-enable#enablebody
+```js
+// Reseteja els valors de bomb,
+// el posiciona a x,y
+// el fa visible i li activa les físiques
+bomb.enableBody(true, x, y, true, true);
+```
+
+Desactivar un objecte:
+https://docs.phaser.io/api-documentation/namespace/physics-arcade-components-enable#disablebody
+```js
+// Desactiva la visibilitat i les físiques de bomb
+bomb.disableBody(true, true);
+```

@@ -43,10 +43,10 @@ Reorganitza el codi de l'exercici 2 per a que el projecte sigui fàcil de manten
 - Defineix els elements de joc com a atributs de l'escena i gestiona la creació d'objectes i les seves col·lisions des del create().
 - Importa les classes amb import i utilitza-les dins de create() i update().
 
-# Exercici 4 - TODO
+# Exercici 4 - TODO (afegir vides al tutorial)
 
 # Exercici 5 - Bowser
-Desenvolupa una versió bàsica del minijoc de Bowser (New. Super Mario Bros, DS).
+Desenvolupa una versió bàsica del minijoc Danger Bob-omb Danger! (New Super Mario Bros., DS).
 [![Bowser gameplay](https://img.youtube.com/vi/-zx0z5XUPcg/0.jpg)](https://youtu.be/-zx0z5XUPcg)
 
 - (Player.js) S'ha de poder desplaçar amb el ratolí.
@@ -58,6 +58,8 @@ Desenvolupa una versió bàsica del minijoc de Bowser (New. Super Mario Bros, DS
 - La col·lisió entre el jugador i una bomba resta 1 vida.
 
 - Utilitza les funcions disableBody(), enableBody(), getFirstDead() per a reciclar les bombes.
+
+## Funcions per a Bombs.js
 
 Obtenir el primer objecte del grup que està desactivat:
 https://docs.phaser.io/api-documentation/class/gameobjects-group#getfirstdead
@@ -75,9 +77,49 @@ https://docs.phaser.io/api-documentation/namespace/physics-arcade-components-ena
 bomb.enableBody(true, x, y, true, true);
 ```
 
+Assignar una velocitat a un objecte:
+https://docs.phaser.io/api-documentation/namespace/physics-arcade-components-velocity#setvelocity
+```js
+// Assigna la velocitat (velX, velY) a bomb
+bomb.setVelocity(velX, velY);
+```
+
 Desactivar un objecte:
 https://docs.phaser.io/api-documentation/namespace/physics-arcade-components-enable#disablebody
 ```js
 // Desactiva la visibilitat i les físiques de bomb
 bomb.disableBody(true, true);
+```
+
+Defineix un esdeveniment cada 'x' ms:
+https://docs.phaser.io/phaser/concepts/time#start-timer
+```js
+// Executa this.spawnBomb() cada 150 ms
+this.scene.time.addEvent({
+    delay: 150,
+    callback: this.spawnBomb,
+    callbackScope: this,
+    loop: true
+});
+```
+
+## Funcions per a Player.js
+TODO: en construcció
+```js
+// Defineix que el jugador es pot arrossegar amb el ratoli
+// useHandCursor canvia el cursor del ratolí
+this.physicsSprite.setInteractive({ useHandCursor: true });
+// Habilita el sistema de drag a physicsSprite
+this.scene.input.setDraggable(this.physicsSprite);
+```
+
+```js
+this.physicsSprite.anims.play('turn');
+```
+
+Iniciar i acabar arrossegament
+```js
+this.input.on('dragstart', listener)
+this.input.on('drag', listener)
+this.input.on('dragend', listener)
 ```

@@ -37,9 +37,49 @@ export default class Player {
             }
         );
 
+        this.lives = 3;
+        this.setState('REAPAREIXENT');
+
+    }
+
+    setState(newState) {
+        switch (newState) {
+            case 'VIU':
+                // https://docs.phaser.io/api-documentation/namespace/physics-arcade-components-enable#enablebody
+                this.physicsSprite.enableBody();
+                this.physicsSprite.clearTint();
+
+                this.state = 'VIU';
+                break;
+
+            case 'MORT':
+                // dura 2 segons i passa a 'REAPAREIXENT' si queden vides
+
+                // no és visible i no afecten les col·lisions
+                this.physicsSprite.disableBody(true, true);
+
+                this.state = 'MORT';
+                break;
+
+            case 'REAPAREIXENT':
+                // dura 3 segons i passa a 'VIU'
+                
+                // no afecten les col·lisions
+                this.physicsSprite.disableBody(true, false);
+                
+                // sprite transparent
+                this.physicsSprite.setTint(0x888888); // fa l'sprite fosc, falta revisar com fer-la transparent
+
+                this.state = 'REAPAREIXENT';
+                break;
+            default:
+                break;
+        }
     }
 
     update() {
+
+        
         
     }
 }

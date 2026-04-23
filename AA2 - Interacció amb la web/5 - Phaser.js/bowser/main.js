@@ -31,7 +31,9 @@ var score = 0;
 var scoreText;
 
 // COL·LISIONS
-// TODO
+function hitBomb(player, bomb) {
+    console.log('ouch')
+}
 
 // MÈTODES DE CONTROL DE FLUX
 // Es carreguen recursos externs (imatges, sons, etc.)
@@ -60,7 +62,7 @@ function create ()
 
 
     // 2. Definim col·lisions
-    // TODO
+    this.physics.add.overlap(player.physicsSprite, bombs.physicSpritesGroup, hitBomb, null, this);
 }
 
 // Lògica de joc. S'executa a cada frame

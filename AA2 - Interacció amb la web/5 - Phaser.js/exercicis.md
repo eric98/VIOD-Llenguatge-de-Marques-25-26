@@ -143,7 +143,8 @@ Animacions
 this.scene.anims.create({
     key: 'idle',
     frames: this.scene.anims.generateFrameNumbers('bombPlayer', { start: 0, end: 1 }),
-    frameRate: 10,
+    frameRate: 10, // frames per segon
+    repeat: -1 // es repeteix infinitament
 });
 
 // Reprodueix l'animació 'idle'

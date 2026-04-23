@@ -18,13 +18,14 @@ export default class Player {
 
         // 2. Configuració d'animacions
         this.scene.anims.create({
-            key: 'turn',
-            frames: [ { key: 'dude', frame: 4 } ],
-            frameRate: 20
+            key: 'idle',
+            frames: this.scene.anims.generateFrameNumbers('dude', { start: 0, end: 1 }),
+            frameRate: 10,
+            repeat: -1
         });
-
-        // Activar animació turn
-        // TODO
+        
+        // Reprodueix l'animació 'idle'
+        this.physicsSprite.anims.play('idle');
 
         // 3. Configuració de la interacció de l'usuari
         // https://docs.phaser.io/api-documentation/event/input-events#drag

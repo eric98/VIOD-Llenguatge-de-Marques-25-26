@@ -116,16 +116,25 @@ this.scene.input.setDraggable(this.physicsSprite);
 
 Iniciar i acabar arrossegament
 ```js
-this.input.on('dragstart', listener);
+// https://docs.phaser.io/api-documentation/event/input-events#drag_start
+// Atrapa el moment on comença l'arrossegament
+this.scene.input.on('dragstart', (pointer, gameObject) => {
+
+});
 
 // https://docs.phaser.io/api-documentation/event/input-events#drag
-// Drag: pointer, gameObject, dragX, dragY
-this.input.on('drag', 
-    function (pointer, gameObject, dragX, dragY) {
-        if (gameObject == )
+// Atrapa els frames mentre s'arrossega qualsevol gameObject
+this.scene.input.on('drag', 
+    (pointer, gameObject, dragX, dragY) => {
+        // Assigna posició de l'sprite a la nova posició del ratolí
+        this.physicsSprite.x = dragX;
+        this.physicsSprite.y = dragY;
     }
 );
-this.input.on('dragend', listener);
+
+// https://docs.phaser.io/api-documentation/event/input-events#drag_end
+// Atrapa el moment on s'acaba l'arrossegament
+this.scene.input.on('dragend', (pointer, gameObject, dropped));
 ```
 
 Animacions

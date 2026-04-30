@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { getFirestore } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
 
 // Altres serveis de Firebase
 // https://firebase.google.com/docs/web/setup#available-libraries

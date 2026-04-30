@@ -16,7 +16,7 @@ a) Crea un projecte a Firebase, activa Cloud Firestore i crea una col·lecció a
 
 b) Escriu el codi JavaScript necessari per a connectar-se a Firebase i utilitza la funció getDocs() per a mostrar tots els documents disponibles per consola. Per a aquest projecte demo, verifica que les regles indiquin que la informació d'aquesta base de dades és pública.
 
-c) Amb l'element &lt;ol&gt; d'HTML, mostra una llista ordenada dels elements del rànquing. Per cada element del rànquing mostra el no i la puntuació.
+c) Amb l'element &lt;ol&gt; d'HTML, mostra una llista ordenada dels elements del rànquing. Per cada element del rànquing mostra el nom i la puntuació.
 
 d) Utilitza les funcions orderBy() i limit() per a ordenar el que la pàgina rep des de Firebase i mostra a l'index.html solament els 5 millors. Escriu en un comentari per què és preferible ordenar les dades mentre es fa la crida a la base de dades.
 

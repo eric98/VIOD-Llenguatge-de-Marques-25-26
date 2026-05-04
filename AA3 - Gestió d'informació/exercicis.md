@@ -33,7 +33,9 @@ c) Afegeix al document la data actual.
 
 d) Evita tenir diferents documents del mateix nom d'usuari.
 
-# Exercici 3 - Aplicació de tasques
+# Exercici 3 - TODO (actualització i esborrat de dades)
+
+# Exercici 4 - Aplicació de tasques
 Investiga les funcions addDoc(), getDocs(), updateDoc() i deleteDoc() per a fer una aplicació bàsica de gestió de tasques. L'aplicació ha de poder afegir tasques, visualitzar-les, marcar-les com completades i eliminar-les.
 
 a) Crea una col·lecció tasques a Firestore. Cada tasca ha de tenir un text, un estat (completada o no) i una data de creació.

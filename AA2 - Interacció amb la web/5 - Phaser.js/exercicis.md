@@ -43,7 +43,13 @@ Reorganitza el codi de l'exercici 2 per a que el projecte sigui fàcil de manten
 - Defineix els elements de joc com a atributs de l'escena i gestiona la creació d'objectes i les seves col·lisions des del create().
 - Importa les classes amb import i utilitza-les dins de create() i update().
 
-# Exercici 4 - TODO (afegir vides al tutorial)
+# Exercici 4 - Música i vides
+Afegeix les següents millores a l'exercici anterior:
+- Sistema de vides utilitzant una màquina d'estats. El Player ha de contenir un atribut state que guarda l'estat actual del jugador: 'VIU', 'REAPAREIXENT' o 'MORT'. A l'inici de la partida, el jugador té 3 vides, i cada vegada que col·lisiona amb una bomba, s'ha d'aplicar -1 a les vides i s'ha de gestionar si es mor o si es reapareix. Afegeix una funció al propi jugador anomenada setState(newState) que gestioni l'assignació de valors necessaris per a cada estat.
+- Investiga els apartats Loading audio files i Play Sound de l'apartat Audio a la documentació i afegeix música de fons durant tota la partida i un so per a quan el jugador salti.
+
+Documentació àudio:
+https://docs.phaser.io/phaser/concepts/audio
 
 # Exercici 5 - Bowser
 Desenvolupa una versió bàsica del minijoc _Danger Bob-omb Danger!_ (New Super Mario Bros., DS).

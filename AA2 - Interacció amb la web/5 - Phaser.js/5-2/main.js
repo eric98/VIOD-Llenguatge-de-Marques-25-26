@@ -26,11 +26,15 @@ var platforms;
 var stars;
 var score = 0;
 var scoreText;
+var starSound;
 
 // COL·LISIONS
 function collectStar (player, star)
 {
-    // Desactiva l'arcadeSprite
+    // Reproduir audio
+    starSound.play();
+
+    // Desactivar l'arcadeSprite
     star.disableBody(true, true);
 
     // Actualitzar l'score
@@ -50,6 +54,8 @@ function preload ()
         'assets/dude.png',
         { frameWidth: 32, frameHeight: 48 }
     );
+
+    this.load.audio('star', 'assets/coin.wav');
 }
 
 // Inicialitza els elements de joc
@@ -76,6 +82,8 @@ function create ()
 
     // Afegim estrelles
     stars = new Stars(this);
+
+    starSound = this.sound.add('star');
 
     // 2. DEFINIM COL·LISIONS (amb els arcadePhysics!)
     // Col·lisions entre elements

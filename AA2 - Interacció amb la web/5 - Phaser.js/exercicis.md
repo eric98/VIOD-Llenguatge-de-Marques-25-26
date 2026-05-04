@@ -51,6 +51,13 @@ Afegeix les següents millores a l'exercici anterior:
 Documentació àudio:
 https://docs.phaser.io/phaser/concepts/audio
 
+Configuració àudio:
+https://docs.phaser.io/phaser/concepts/audio#sound-instance-configuration
+> - Si volem reproduir un àudio en bucle, podem passar-li per paràmetre un objecte amb els únics paràmetres a modificar.
+> - Exemples: 
+<br>// backgroundTheme.play({ loop: true }); 
+<br>// backgroundTheme.play({ volume: 0.5, loop: true });
+
 # Exercici 5 - Bowser
 Desenvolupa una versió bàsica del minijoc _Danger Bob-omb Danger!_ (New Super Mario Bros., DS).
 [![Bowser gameplay](https://img.youtube.com/vi/-zx0z5XUPcg/0.jpg)](https://youtu.be/-zx0z5XUPcg)
